@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Kaspi.kz</title>
+  <link rel="manifest" href="manifest.json" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+      background-color: #FFFFFF;
+      color: #111111;
+      overscroll-behavior-y: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .hidden-screen { display: none !important; }
+    @keyframes softPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.96); opacity: 0.85; }
+    }
+    .animate-egov {
+      animation: softPulse 1.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#111111]">
+
+  <!-- ==================== ЭКРАН 1: ГЛАВНАЯ ==================== -->
+  <div id="screen-home" class="mx-auto flex min-h-screen max-w-[430px] flex-col bg-white">
+    <!-- Поиск -->
+    <header class="sticky top-0 z-30 bg-white/95 px-4 pb-2.5 pt-3 backdrop-blur-md">
+      <div class="flex items-center rounded-xl bg-[#F2F2F7] px-3.5 py-2.5">
+        <svg class="mr-2.5 h-5 w-5 shrink-0 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Поиск по Kaspi.kz" class="w-full bg-transparent text-[15px] text-[#111111] placeholder-[#8E8E93] focus:outline-none" />
+      </div>
+    </header>
+
+    <main class="flex-1 space-y-4 pb-24">
+      <!-- Верхние промо-карточки -->
+      <section class="no-scrollbar flex gap-3 overflow-x-auto px-4 pt-1">
+        <!-- Баннер 1: 0-0-12 -->
+        <div class="w-[172px] shrink-0">
+          <div class="relative h-[108px] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#6B1D73] via-[#9C2768] to-[#D84359] p-3 text-white shadow-xs">
+            <div class="text-[10px] font-bold uppercase tracking-wide opacity-95">ВСЕ В РАССРОЧКУ</div>
+            <div class="mt-0.5 text-[26px] font-black leading-none tracking-tight">0·0·12</div>
+            <div class="pointer-events-none absolute -bottom-2 right-2 flex items-end gap-1 opacity-90">
+              <div class="h-10 w-7 rounded-md bg-indigo-950/70 border border-white/30"></div>
+              <div class="h-12 w-4 rounded-full bg-amber-400/90"></div>
+            </div>
+          </div>
+          <div class="mt-1.5 text-[11px] text-[#8E8E93]">16 января - 29 января</div>
+        </div>
+
+        <!-- Баннер 2: Объявления -->
+        <div class="w-[172px] shrink-0">
+          <div class="relative h-[108px] w-full overflow-hidden rounded-2xl bg-[#F3F4F6] p-3 text-[#111111]">
+            <div class="flex items-center gap-1.5">
+              <span class="flex h-4 w-4 items-center justify-center rounded bg-[#F14635] text-[9px] font-bold text-white">目</span>
+              <span class="text-[11px] font-bold">Объявления</span>
+            </div>
+            <div class="mt-1.5 text-[12px] font-bold leading-tight text-[#111111]">
+              Сервис<br />бесплатных<br />объявлений
+            </div>
+            <div class="pointer-events-none absolute bottom-2 right-2 h-11 w-11 rounded-xl bg-amber-400/80"></div>
+          </div>
+          <div class="mt-1.5 text-[11px] text-[#8E8E93]">Бесплатное размещение</div>
+        </div>
+      </section>
+
+      <!-- Сетка 8 сервисов -->
+      <section class="grid grid-cols-4 gap-y-4 px-3 pt-1">
+        <!-- 1. Kaspi QR -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Kaspi QR</span>
+        </button>
+
+        <!-- 2. Мой Банк -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Мой Банк</span>
+        </button>
+
+        <!-- 3. Платежи -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Платежи</span>
+        </button>
+
+        <!-- 4. Переводы -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Переводы</span>
+        </button>
+
+        <!-- 5. Магазин -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Магазин</span>
+        </button>
+
+        <!-- 6. Travel -->
+        <button class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="16" height="14" x="4" y="6" rx="2"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M9 12a3 3 0 0 0 6 0"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Travel</span>
+        </button>
+
+        <!-- 7. ГОСУСЛУГИ (РАБОЧАЯ КНОПКА) -->
+        <button onclick="navigateTo('gosuslugi')" class="flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          </div>
+          <span class="text-[12px] text-[#111111]">Госуслуги</span>
+        </button>
+
+        <!-- 8. Объявления NEW -->
+        <button class="relative flex flex-col items-center gap-1.5 active:scale-90 transition-transform">
+          <div class="relative flex h-10 w-10 items-center justify-center">
+            <svg class="h-7 w-7 text-[#F14635]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><line x1="8" x2="16" y1="9" y2="9"/><line x1="8" x2="14" y1="13" y2="13"/></svg>
+            <span class="absolute -right-3 -top-1 rounded-full bg-[#F14635] px-1.5 py-0.5 text-[8px] font-extrabold text-white">NEW</span>
+          </div>
+          <span class="text-[12px] text-[#111111]">Объявления</span>
+        </button>
+      </section>
+
+      <div class="mx-4 border-t border-zinc-100"></div>
+
+      <!-- Строка Magnum -->
+      <section class="flex items-center justify-between px-4 py-0.5">
+        <div class="flex items-center gap-3">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E31C79] text-[21px] font-black text-white">
+            m
+          </div>
+          <div>
+            <div class="text-[15px] font-medium text-[#111111]">Magnum</div>
+            <div class="text-[12px] text-[#8E8E93]">Продукты питания с бесплатной доставкой</div>
+          </div>
+        </div>
+        <svg class="h-5 w-5 text-zinc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </section>
+
+      <div class="mx-4 border-t border-zinc-100"></div>
+
+      <!-- Блок Рассрочка / Кредит / Депозит -->
+      <section class="no-scrollbar flex gap-5 overflow-x-auto px-4">
+        <div class="w-[225px] shrink-0 space-y-3.5">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F14635] text-[10px] font-black text-white">
+              0·0·12
+            </div>
+            <div class="text-[15px] font-normal text-[#111111]">Рассрочка 0-0-12</div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5AC85A] text-[17px] font-bold text-white">
+              ₸
+            </div>
+            <div>
+              <div class="text-[15px] font-normal leading-tight text-[#111111]">Кредит Наличными</div>
+              <div class="text-[12px] text-[#8E8E93]">до 1 млн тенге</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[150px] shrink-0 space-y-3.5">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFD600] text-[18px] font-bold text-white">
+              ₸
+            </div>
+            <div>
+              <div class="text-[15px] leading-tight text-[#111111]">Kaspi</div>
+              <div class="text-[11px] text-[#8E8E93]">Эффекти...</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white text-[#F14635]">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-[15px] leading-tight text-[#111111]">Регис...<br /><span class="text-[13px] text-zinc-600">онлай...</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Нижний желтый баннер Magnum -->
+      <section class="px-4 pt-1">
+        <div class="relative overflow-hidden rounded-2xl bg-[#F4E076] p-4">
+          <div class="relative z-10 max-w-[62%]">
+            <div class="text-[22px] font-black italic tracking-tight text-[#D81B60]">magnum</div>
+            <div class="mt-0.5 text-[13px] font-medium leading-snug text-[#111111]">
+              Продукты с быстрой доставкой!
+            </div>
+            <button class="mt-3 rounded-lg bg-[#0089D0] px-7 py-2 text-[14px] font-medium text-white shadow-xs">
+              Купить
+            </button>
+          </div>
+          <div class="pointer-events-none absolute -bottom-3 -right-3 h-28 w-36 rounded-tl-3xl bg-amber-600/20"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Нижний таб-бар -->
+    <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto max-w-[430px] border-t border-zinc-200 bg-white/95 px-2 py-2 backdrop-blur-md">
+      <div class="grid grid-cols-4">
+        <div class="flex flex-col items-center gap-1 text-[#F14635]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="text-[10px] font-medium">Главная</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
+          <span class="text-[10px] font-medium">Kaspi QR</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span class="text-[10px] font-medium">Сообщения</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <span class="text-[10px] font-medium">Сервисы</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ==================== ЭКРАН 2: ГОСУСЛУГИ ==================== -->
+  <div id="screen-gosuslugi" class="hidden-screen mx-auto flex min-h-screen max-w-[430px] flex-col bg-white">
+    <header class="sticky top-0 z-30 flex items-center justify-between bg-white px-4 py-3.5">
+      <button onclick="goBack()" class="flex h-8 w-8 items-center justify-center text-[#111111] active:opacity-60">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <h1 class="text-[18px] font-semibold text-[#111111]">Госуслуги</h1>
+      <div class="w-8"></div>
+    </header>
+
+    <main class="flex-1 space-y-4 pb-24">
+      <!-- Переключатель Все услуги / Мои заявки -->
+      <div class="px-4">
+        <div class="grid grid-cols-2 rounded-xl bg-[#EFEFF4] p-1">
+          <button class="rounded-lg bg-white py-1.5 text-[14px] font-semibold text-[#111111] shadow-xs">Все услуги</button>
+          <button class="rounded-lg py-1.5 text-[14px] font-medium text-[#8E8E93]">Мои заявки</button>
+        </div>
+      </div>
+
+      <!-- Поиск по Госуслугам -->
+      <div class="px-4">
+        <div class="flex items-center rounded-xl bg-[#F2F2F7] px-3.5 py-2.5">
+          <svg class="mr-2.5 h-5 w-5 shrink-0 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Поиск по Госуслугам" class="w-full bg-transparent text-[15px] text-[#111111] placeholder-[#8E8E93] focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Горизонтальные карточки документов -->
+      <section class="no-scrollbar flex gap-3 overflow-x-auto px-4">
+        <!-- Карточка 1: УДОСТОВЕРЕНИЕ ЛИЧНОСТИ -->
+        <button onclick="openIdWithLoading()" class="flex w-[142px] shrink-0 flex-col justify-between rounded-2xl bg-[#F5F5F7] p-3.5 text-left active:scale-95 transition-transform">
+          <div class="h-14 w-24 rounded-lg border border-teal-200/80 bg-gradient-to-br from-[#D4EFEA] via-[#E6F4EA] to-[#D6E6F9] p-2">
+            <div class="flex items-center gap-1.5">
+              <div class="h-6 w-5 rounded-xs border border-teal-500/40 bg-teal-500/10"></div>
+              <div class="flex-1 space-y-1">
+                <div class="h-1 w-full rounded bg-teal-600/30"></div>
+                <div class="h-1 w-4/5 rounded bg-teal-600/30"></div>
+                <div class="h-1 w-3/5 rounded bg-teal-600/30"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 text-[14px] font-medium leading-tight text-[#111111]">
+            Удостоверение<br />личности
+          </div>
+        </button>
+
+        <!-- Карточка 2: Паспорт гражданина РК -->
+        <button onclick="openIdWithLoading()" class="flex w-[142px] shrink-0 flex-col justify-between rounded-2xl bg-[#F5F5F7] p-3.5 text-left active:scale-95 transition-transform">
+          <div class="flex h-14 w-24 flex-col items-center justify-center rounded-lg bg-[#2A9DC4] p-2 text-white">
+            <div class="h-5 w-5 rounded-full border-2 border-[#F6D365] bg-[#F6D365]/30"></div>
+            <div class="mt-1.5 h-1 w-10 rounded bg-white/70"></div>
+          </div>
+          <div class="mt-4 text-[14px] font-medium leading-tight text-[#111111]">
+            Паспорт<br />гражданина РК
+          </div>
+        </button>
+
+        <!-- Карточка 3: Водительские права -->
+        <button onclick="openIdWithLoading()" class="flex w-[142px] shrink-0 flex-col justify-between rounded-2xl bg-[#F5F5F7] p-3.5 text-left active:scale-95 transition-transform">
+          <div class="h-14 w-24 rounded-lg border border-rose-200/80 bg-gradient-to-br from-[#FDE2E4] via-[#FAD2E1] to-[#E2ECE9] p-2">
+            <div class="flex items-center gap-1.5">
+              <div class="h-6 w-5 rounded-xs bg-rose-400/25"></div>
+              <div class="flex-1 space-y-1">
+                <div class="h-1 w-full rounded bg-rose-500/30"></div>
+                <div class="h-1 w-3/4 rounded bg-rose-500/30"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 text-[14px] font-medium leading-tight text-[#111111]">
+            Водительские<br />права
+          </div>
+        </button>
+      </section>
+
+      <!-- Все документы -->
+      <div class="flex items-center justify-between px-4 pt-1">
+        <span class="text-[15px] font-medium text-[#0089D0]">Все документы</span>
+        <svg class="h-4 w-4 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+
+      <!-- Категории: Популярные / Справки / Авто / Жилье -->
+      <section class="grid grid-cols-4 gap-2 px-4">
+        <div class="flex flex-col items-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5F5F7] text-[#F14635]">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          </div>
+          <span class="mt-1.5 border-b-2 border-[#F14635] pb-1 text-[12px] font-semibold text-[#111111]">Популярные</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5F5F7] text-[#34C759]">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <span class="mt-1.5 text-[12px] text-[#111111]">Справки</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5F5F7] text-[#F14635]">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+          </div>
+          <span class="mt-1.5 text-[12px] text-[#111111]">Авто</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5F5F7] text-[#0089D0]">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          </div>
+          <span class="mt-1.5 text-[12px] text-[#111111]">Жилье</span>
+        </div>
+      </section>
+
+      <!-- Популярные и новые -->
+      <section class="space-y-3 px-4 pt-2">
+        <h2 class="text-[18px] font-bold text-[#111111]">Популярные и новые</h2>
+
+        <div class="divide-y divide-zinc-100">
+          <div class="flex items-center justify-between py-3">
+            <div class="flex items-center gap-3 pr-2">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#FDECEC] text-[#F14635]">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <div class="text-[15px] font-medium text-[#111111]">Стать самозанятым</div>
+                <div class="text-[12px] leading-snug text-[#8E8E93]">Открыть счет и начать принимать оплату</div>
+              </div>
+            </div>
+            <span class="shrink-0 rounded-full bg-[#F14635] px-2 py-0.5 text-[10px] font-bold text-white">NEW</span>
+          </div>
+
+          <div class="flex items-center justify-between py-3">
+            <div class="flex items-center gap-3 pr-2">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#FDECEC] text-[#F14635]">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <div class="text-[15px] font-medium leading-tight text-[#111111]">Изменение реквизитов и режима ИП</div>
+                <div class="mt-0.5 text-[12px] text-[#8E8E93]">Формат удостоверения: Новый</div>
+              </div>
+            </div>
+            <span class="shrink-0 rounded-full bg-[#F14635] px-2 py-0.5 text-[10px] font-bold text-white">NEW</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Нижний таб-бар -->
+    <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto max-w-[430px] border-t border-zinc-200 bg-white/95 px-2 py-2 backdrop-blur-md">
+      <div class="grid grid-cols-4">
+        <button onclick="navigateTo('home')" class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="text-[10px] font-medium">Главная</span>
+        </button>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
+          <span class="text-[10px] font-medium">Kaspi QR</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span class="text-[10px] font-medium">Сообщения</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#8E8E93]">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <span class="text-[10px] font-medium">Сервисы</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ==================== ЭКРАН 3: ЗАГРУЗКА eGov / Kaspi (3 СЕКУНДЫ) ==================== -->
+  <div id="screen-loading" class="hidden-screen mx-auto flex min-h-screen max-w-[430px] flex-col items-center justify-between bg-white px-6 py-10">
+    <div></div>
+
+    <div class="animate-egov flex items-center justify-center gap-6">
+      <div class="flex h-24 w-24 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-2xs">
+        <div class="flex items-baseline font-sans text-[23px] font-extrabold tracking-tight text-[#0072CE]">
+          <span>e</span>
+          <span class="mx-[1px] inline-flex h-3 w-3 items-center justify-center rounded-full bg-[#0072CE] text-[9px] font-bold text-white">+</span>
+          <span>gov</span>
+        </div>
+      </div>
+
+      <div class="flex h-24 w-24 items-center justify-center rounded-full bg-[#F14635] shadow-2xs">
+        <svg class="h-14 w-14 text-white" viewBox="0 0 64 64" fill="currentColor">
+          <path d="M22 14c-3 0-5 2.5-5 5.5V48h5V33l8-5 7 9v11h5V35l-9-11 7-6c2-1.8 1-4-1.5-4H22zm18 11c-2.5 0-4.5 2-4.5 4.5S37.5 34 40 34s4.5-2 4.5-4.5S42.5 25 40 25zm-3 11v12h5V36h-5z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="text-center text-[12px] leading-snug text-[#B0B0B5]">
+      При поддержке Министерства<br />цифрового развития
+    </div>
+  </div>
+
+  <!-- ==================== ЭКРАН 4: УДОСТОВЕРЕНИЕ ЛИЧНОСТИ ==================== -->
+  <div id="screen-id_card" class="hidden-screen mx-auto flex min-h-screen max-w-[430px] flex-col bg-white">
+    <header class="sticky top-0 z-30 flex items-center justify-between border-b border-zinc-100 bg-white px-4 py-3.5">
+      <button onclick="goBack()" class="flex h-8 w-8 items-center justify-center text-[#111111] active:opacity-60">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      </button>
+      <h1 onclick="handleSecretTap()" class="text-[17px] font-semibold text-[#111111]">Удостоверение личности</h1>
+      <div class="w-8"></div>
+    </header>
+
+    <!-- Переключатель Документ / Реквизиты -->
+    <div class="px-4 pt-3">
+      <div class="grid grid-cols-2 rounded-xl bg-[#EFEFF4] p-1">
+        <button id="btn-tab-doc" onclick="switchIdTab('document')" class="rounded-lg bg-white py-1.5 text-[14px] font-semibold text-[#111111] shadow-xs">Документ</button>
+        <button id="btn-tab-det" onclick="switchIdTab('details')" class="rounded-lg py-1.5 text-[14px] font-medium text-[#8E8E93]">Реквизиты</button>
+      </div>
+    </div>
+
+    <!-- Вкладка ДОКУМЕНТ -->
+    <main id="id-view-document" class="flex flex-1 flex-col justify-between px-4 py-4">
+      <div class="my-auto flex flex-1 flex-col items-center justify-center py-2">
+        <label id="upload-btn-wrap" class="cursor-pointer rounded-xl bg-[#2C6BED] px-7 py-3 text-[15px] font-medium text-white shadow-xs active:scale-95 transition-transform">
+          <span>Загрузить фото</span>
+          <input id="id-photo-input" type="file" accept="image/*" onchange="handlePhotoUpload(event)" class="hidden" />
+        </label>
+
+        <div id="uploaded-id-wrap" class="hidden-screen flex w-full flex-col items-center">
+          <img id="uploaded-id-img" src="" alt="Удостоверение личности" class="max-h-[460px] w-full rounded-2xl object-contain shadow-sm" />
+        </div>
+      </div>
+
+      <div class="space-y-2.5 pt-3">
+        <button onclick="openPresentModal()" class="flex w-full items-center justify-center gap-2 rounded-xl bg-[#2C6BED] py-3.5 text-[15px] font-medium text-white shadow-xs active:scale-[0.98] transition-transform">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
+          <span>Предъявить документ</span>
+        </button>
+
+        <button class="flex w-full items-center justify-center rounded-xl border border-zinc-300 bg-white py-3 text-[15px] font-medium text-[#2C6BED] active:scale-[0.98] transition-transform">
+          Отправить документ
+        </button>
+      </div>
+    </main>
+
+    <!-- Вкладка РЕКВИЗИТЫ -->
+    <main id="id-view-details" class="hidden-screen flex-1 divide-y divide-zinc-100 px-4 py-2">
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">ФИО</div><div id="det-full-name" class="mt-0.5 text-[15px] font-medium text-[#111111]">АХМЕТОВ АРМАН СЕРИКОВИЧ</div></div>
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">ИИН</div><div id="det-iin" class="mt-0.5 text-[15px] font-medium text-[#111111]">030514501284</div></div>
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">Дата рождения</div><div id="det-birth-date" class="mt-0.5 text-[15px] font-medium text-[#111111]">14.05.2003</div></div>
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">Номер документа</div><div id="det-doc-num" class="mt-0.5 text-[15px] font-medium text-[#111111]">048291735</div></div>
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">Дата выдачи</div><div id="det-issue-date" class="mt-0.5 text-[15px] font-medium text-[#111111]">20.06.2019</div></div>
+      <div class="py-3.5"><div class="text-[12px] text-[#8E8E93]">Срок действия</div><div id="det-expiry-date" class="mt-0.5 text-[15px] font-medium text-[#111111]">19.06.2029</div></div>
+    </main>
+  </div>
+
+  <!-- МОДАЛКА QR-КОДА -->
+  <div id="present-modal" onclick="closePresentModal()" class="hidden-screen fixed inset-0 z-50 flex items-end justify-center bg-black/50">
+    <div onclick="event.stopPropagation()" class="w-full max-w-[430px] rounded-t-3xl bg-white p-6 text-center text-[#111111] shadow-xl">
+      <div class="mx-auto mb-4 h-1 w-10 rounded-full bg-zinc-300"></div>
+      <div class="flex items-center justify-between">
+        <span class="text-[17px] font-semibold">Предъявить документ</span>
+        <button onclick="closePresentModal()" class="rounded-full bg-zinc-100 px-2.5 py-1 text-zinc-500">✕</button>
+      </div>
+      <p class="mt-2 text-[13px] text-[#8E8E93]">Покажите QR-код или продиктуйте код сотруднику</p>
+      <div class="mx-auto my-5 flex h-44 w-44 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-3">
+        <svg class="h-full w-full text-[#111111]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+      </div>
+      <div class="text-[12px] text-[#8E8E93]">Короткий код</div>
+      <div id="present-code" class="mt-1 font-mono text-[28px] font-bold tracking-widest text-[#111111]">482 910</div>
+    </div>
+  </div>
+
+  <!-- СКРЫТОЕ МЕНЮ РЕКВИЗИТА (5 ТАПОВ ПО ЗАГОЛОВКУ "Удостоверение личности") -->
+  <div id="prop-editor" class="hidden-screen fixed inset-0 z-50 overflow-y-auto bg-black/70 p-4">
+    <div class="mx-auto max-w-[410px] rounded-2xl bg-white p-4 text-[#111111] shadow-xl">
+      <div class="mb-3 flex items-center justify-between border-b border-zinc-200 pb-2.5">
+        <span class="text-[16px] font-bold text-[#F14635]">Настройка реквизита для съемки</span>
+        <button onclick="closePropEditor()" class="rounded-full bg-zinc-100 px-2.5 py-1 text-zinc-500">✕</button>
+      </div>
+      <div class="space-y-3 text-[13px]">
+        <div class="flex gap-2">
+          <label class="flex-1 cursor-pointer rounded-xl bg-[#2C6BED] py-2.5 text-center font-medium text-white">
+            Заменить фото
+            <input type="file" accept="image/*" onchange="handlePhotoUpload(event)" class="hidden" />
+          </label>
+          <button onclick="resetIdPhoto()" class="rounded-xl border border-zinc-300 px-4 py-2.5 font-medium text-zinc-700">
+            Убрать фото
+          </button>
+        </div>
+        <div><label class="text-zinc-500">ФИО (для вкладки Реквизиты)</label><input id="inp-fullName" type="text" oninput="updateDetail('fullName', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <div><label class="text-zinc-500">ИИН</label><input id="inp-iin" type="text" oninput="updateDetail('iin', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <div><label class="text-zinc-500">Дата рождения</label><input id="inp-birthDate" type="text" oninput="updateDetail('birthDate', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <div><label class="text-zinc-500">Номер документа</label><input id="inp-docNumber" type="text" oninput="updateDetail('docNumber', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <div><label class="text-zinc-500">Дата выдачи</label><input id="inp-issueDate" type="text" oninput="updateDetail('issueDate', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <div><label class="text-zinc-500">Срок действия</label><input id="inp-expiryDate" type="text" oninput="updateDetail('expiryDate', this.value)" class="mt-0.5 w-full rounded-lg bg-[#F2F2F7] px-3 py-2" /></div>
+        <button onclick="closePropEditor()" class="mt-2 w-full rounded-xl bg-[#34C759] py-3 text-[15px] font-bold text-white">Готово</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+
+    let currentScreen = 'home';
+    let loadingTimer = null;
+
+    const defaultDetails = {
+      fullName: 'АХМЕТОВ АРМАН СЕРИКОВИЧ',
+      iin: '030514501284',
+      birthDate: '14.05.2003',
+      docNumber: '048291735',
+      issueDate: '20.06.2019',
+      expiryDate: '19.06.2029'
+    };
+
+    let detailsData = JSON.parse(localStorage.getItem('film_id_details') || 'null') || defaultDetails;
+    let savedPhoto = localStorage.getItem('film_id_photo') || '';
+
+    function renderState() {
+      document.getElementById('det-full-name').textContent = detailsData.fullName;
+      document.getElementById('det-iin').textContent = detailsData.iin;
+      document.getElementById('det-birth-date').textContent = detailsData.birthDate;
+      document.getElementById('det-doc-num').textContent = detailsData.docNumber;
+      document.getElementById('det-issue-date').textContent = detailsData.issueDate;
+      document.getElementById('det-expiry-date').textContent = detailsData.expiryDate;
+
+      if (savedPhoto) {
+        document.getElementById('upload-btn-wrap').classList.add('hidden-screen');
+        document.getElementById('uploaded-id-wrap').classList.remove('hidden-screen');
+        document.getElementById('uploaded-id-img').src = savedPhoto;
+      } else {
+        document.getElementById('upload-btn-wrap').classList.remove('hidden-screen');
+        document.getElementById('uploaded-id-wrap').classList.add('hidden-screen');
+        document.getElementById('uploaded-id-img').src = '';
+      }
+    }
+
+    function showScreen(name) {
+      currentScreen = name;
+      ['home', 'gosuslugi', 'loading', 'id_card'].forEach(s => {
+        document.getElementById('screen-' + s).classList.toggle('hidden-screen', s !== name);
+      });
+      window.scrollTo(0, 0);
+    }
+
+    function navigateTo(name) {
+      clearTimeout(loadingTimer);
+      history.pushState({ screen: name }, '');
+      showScreen(name);
+    }
+
+    function openIdWithLoading() {
+      clearTimeout(loadingTimer);
+      history.pushState({ screen: 'id_card' }, '');
+      showScreen('loading');
+      loadingTimer = setTimeout(() => {
+        if (currentScreen === 'loading') {
+          showScreen('id_card');
+        }
+      }, 3000);
+    }
+
+    function goBack() {
+      clearTimeout(loadingTimer);
+      if (currentScreen === 'id_card' || currentScreen === 'loading') {
+        showScreen('gosuslugi');
+      } else if (currentScreen === 'gosuslugi') {
+        showScreen('home');
+      }
+    }
+
+    window.addEventListener('popstate', () => {
+      closePresentModal();
+      goBack();
+    });
+
+    function switchIdTab(tab) {
+      const isDoc = tab === 'document';
+      document.getElementById('id-view-document').classList.toggle('hidden-screen', !isDoc);
+      document.getElementById('id-view-details').classList.toggle('hidden-screen', isDoc);
+      document.getElementById('btn-tab-doc').className = isDoc
+        ? 'rounded-lg bg-white py-1.5 text-[14px] font-semibold text-[#111111] shadow-xs'
+        : 'rounded-lg py-1.5 text-[14px] font-medium text-[#8E8E93]';
+      document.getElementById('btn-tab-det').className = !isDoc
+        ? 'rounded-lg bg-white py-1.5 text-[14px] font-semibold text-[#111111] shadow-xs'
+        : 'rounded-lg py-1.5 text-[14px] font-medium text-[#8E8E93]';
+    }
+
+    function handlePhotoUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const maxW = 1200;
+          const scale = img.width > maxW ? maxW / img.width : 1;
+          canvas.width = img.width * scale;
+          canvas.height = img.height * scale;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          savedPhoto = canvas.toDataURL('image/jpeg', 0.88);
+          try {
+            localStorage.setItem('film_id_photo', savedPhoto);
+          } catch (err) {
+            console.warn('Storage limit', err);
+          }
+          renderState();
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function resetIdPhoto() {
+      savedPhoto = '';
+      localStorage.removeItem('film_id_photo');
+      renderState();
+    }
+
+    function openPresentModal() {
+      const code = Math.floor(100 + Math.random() * 900) + ' ' + Math.floor(100 + Math.random() * 900);
+      document.getElementById('present-code').textContent = code;
+      document.getElementById('present-modal').classList.remove('hidden-screen');
+    }
+
+    function closePresentModal() {
+      document.getElementById('present-modal').classList.add('hidden-screen');
+    }
+
+    let tapCount = 0;
+    let tapTimer = null;
+    function handleSecretTap() {
+      tapCount++;
+      clearTimeout(tapTimer);
+      if (tapCount >= 5) {
+        tapCount = 0;
+        ['fullName', 'iin', 'birthDate', 'docNumber', 'issueDate', 'expiryDate'].forEach(k => {
+          document.getElementById('inp-' + k).value = detailsData[k] || '';
+        });
+        document.getElementById('prop-editor').classList.remove('hidden-screen');
+      } else {
+        tapTimer = setTimeout(() => { tapCount = 0; }, 1200);
+      }
+    }
+
+    function updateDetail(key, val) {
+      detailsData[key] = val;
+      localStorage.setItem('film_id_details', JSON.stringify(detailsData));
+      renderState();
+    }
+
+    function closePropEditor() {
+      document.getElementById('prop-editor').classList.add('hidden-screen');
+    }
+
+    renderState();
+  </script>
+</body>
+</html>
